@@ -3,8 +3,18 @@
   2.1 git init: Khởi tạo repo lacal
 3. kết nối repo lại
   git remote add origin "url repo remote trên github"
-4 Đẩy file từ local lên remote
+4 Đẩy file từ local lên remote : 3 bước cố định ( lập đi lặp lại) 
   4.1 Khai báo những file cần đẩy lên
-   git add "tenFile" -------- git add index.html
-   git add . --------- đẩy lên tất cả các file cần đẩy lên 
-   git add -A(-all) ------ Khai báo chỉ đẩy những fille có thay đổi
+      git add "tenFile" -------- git add index.html
+      git add . --------- đẩy lên tất cả các file cần đẩy lên 
+      git add -A(-all) ------ Khai báo chỉ đẩy những fille có thay đổi
+  4.2 xác nhận file cần thêm và lý do thêm file ( phải có ý nghĩa , đúng mục đích) --- CI/CD
+      git commit -m "lý do"
+      git commit -m "create html and note" 
+  4.3 Đẩy file lên repo remote (main - master)
+      branchName: main hoặc master  
+      
+      - u origin : chỉ áp dụng khí push 1 branch lần đầu tiên
+      từ lần 2 trở đi:
+      git push
+      git push -u origin "branchName"
